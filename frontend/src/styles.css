@@ -1,0 +1,145 @@
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1c2530;
+  background: #eef3f8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.form-shell {
+  width: min(920px, 100%);
+  background: #ffffff;
+  border: 1px solid #d7e1ea;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(36, 53, 71, 0.12);
+  overflow: hidden;
+}
+
+.form-header {
+  padding: 32px;
+  background: #17324d;
+  color: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #9dd7cc;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.form-header p:last-child {
+  max-width: 620px;
+  margin: 12px 0 0;
+  color: #d7e5ef;
+}
+
+.enquiry-form {
+  display: grid;
+  gap: 20px;
+  padding: 32px;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  color: #314255;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #bac8d6;
+  border-radius: 6px;
+  color: #14202b;
+  background: #ffffff;
+  padding: 12px 14px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1b7f72;
+  box-shadow: 0 0 0 3px rgba(27, 127, 114, 0.16);
+}
+
+button {
+  width: fit-content;
+  min-width: 170px;
+  border: 0;
+  border-radius: 6px;
+  background: #1b7f72;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 13px 20px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.status-message {
+  margin: 0;
+  color: #17324d;
+  font-weight: 700;
+}
+
+@media (max-width: 720px) {
+  .form-header,
+  .enquiry-form {
+    padding: 24px;
+  }
+
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+}
