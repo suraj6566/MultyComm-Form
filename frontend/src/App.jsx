@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 const dispositionOptions = [
@@ -20,7 +20,7 @@ const initialFormData = {
   disposition: ""
 };
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api/form";
+const API_URL = "http://localhost:5000/api/form";
 
 function App() {
   const [formData, setFormData] = useState(initialFormData);

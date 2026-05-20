@@ -1,96 +1,67 @@
-# multycomm-form
+# MultyComm Form
 
-A beginner-friendly full stack enquiry form built with React, Axios, Node.js, Express.js, MongoDB, and Nodemailer.
+Simple full stack form project made using React, Node.js, Express.js, MongoDB, Axios, and Nodemailer.
 
-## Folder Structure
+The form saves user data in MongoDB.
 
-```text
-multycomm-form
-├── backend
-│   ├── src
-│   │   ├── models
-│   │   │   └── FormSubmission.js
-│   │   ├── routes
-│   │   │   └── formRoutes.js
-│   │   └── server.js
-│   ├── .env.example
-│   └── package.json
-├── frontend
-│   ├── src
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── styles.css
-│   ├── .env.example
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js
-└── README.md
-```
+Email functionality is currently disabled/commented so the project can run without SMTP setup.
 
-## Backend Setup
+---
+
+# Features
+
+- User enquiry form
+- MongoDB database integration
+- REST API using Express.js
+- Save form data in database
+- React frontend form
+- Axios API integration
+- Conditional email logic
+- Simple and beginner friendly code
+
+---
+
+# Frontend
+
+Frontend is made using:
+- React
+- Axios
+- Vite
+
+Used for:
+- Form UI
+- User input
+- API calls
+
+---
+
+# Backend
+
+Backend is made using:
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Nodemailer
+
+Used for:
+- API creation
+- Database connection
+- Saving form data
+
+---
+
+# Backend Setup
 
 ```bash
 cd backend
 npm install
-copy .env.example .env
 npm run dev
+
+Create `.env` file inside backend folder:
+
+```env
+PORT=5000
+
+MONGO_URI=mongodb://127.0.0.1:27017/multycomm-form
 ```
-
-Update `backend/.env` with your MongoDB URL and SMTP email settings.
-
-Default backend URL:
-
-```text
-http://localhost:5000
-```
-
-POST API:
-
-```text
-POST http://localhost:5000/api/form
-```
-
-## Frontend Setup
-
-Open a second terminal:
-
-```bash
-cd frontend
-npm install
-copy .env.example .env
-npm run dev
-```
-
-Default frontend URL:
-
-```text
-http://localhost:5173
-```
-
-## Email Routing
-
-Emails are sent only when the selected disposition is not `General Enquiry`.
-
-```text
-Customer Support    -> ayan@multycomm.com
-Consultant Support  -> akash@multycomm.com
-B2B Lead            -> deepak@multycomm.com
-New Lead            -> aveek@multycomm.com
-General Enquiry     -> no email, only saved in MongoDB
-```
-
-Email subject:
-
-```text
-New Client Enquiry from MultyComm Form
-```
-
-## Notes
-
-- Make sure MongoDB is running before starting the backend.
-- If you use Gmail SMTP, create an app password and use it as `SMTP_PASS`.
-- The backend saves every valid form submission in MongoDB.
-
-
-# git 
-- you can clone from my git hub
